@@ -15,7 +15,6 @@ export const isCardImages = (images: any): images is CardImages => {
 };
 
 export const isCardData = (data: any): data is CardData => {
-  console.log(data);
   if (typeof data !== "object") return false;
   if (!data.name) return false;
   if (!isCardImages(data.image_uris)) return false;
