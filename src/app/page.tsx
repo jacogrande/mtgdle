@@ -39,9 +39,9 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="flex min-h-screen flex-col items-center p-24 bg-gray-200">
-      <h1 className="text-4xl font-bold mb-16">MTGdle</h1>
-      <div className="w-[480px] flex justify-between items-center relative">
+    <main className="flex min-h-screen flex-col items-center md:p-24 p-2 bg-gray-200">
+      <h1 className="text-4xl font-bold mb-8 mt-4 md:mt-0">MTGdle</h1>
+      <div className="md:w-[480px] w-full flex justify-between items-center relative mb-4">
         <Searchbar />
         <button
           className="bg-rose-500 p-2 rounded-lg font-medium text-white"
@@ -51,8 +51,8 @@ export default function Home() {
         </button>
       </div>
       {currentCard && <ImageDisplay />}
-      <div className="w-[480px] mt-4 flex justify-end">
-        <button onClick={revealCard} className="text-rose-700/70 mr-4">Reveal</button>
+      <div className="md:w-[480px] w-full mt-4 flex justify-end">
+        <button onClick={revealCard} className="text-rose-700/70 md:mr-4 mr-8">Reveal</button>
         <button onClick={getNextCard} className="text-rose-700/70">Reset</button>
       </div>
     </main>
